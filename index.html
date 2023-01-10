@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>JavaScript Type Annotations</title>
+<style>
+
+body { color: white; background: black; font-family: monospace; font-size: 3.5vh; height: 60vh; width: calc(100% - 40vh); margin: 20vh; overflow: hidden; }
+pre { margin: 0; white-space: pre-wrap; }
+pre:not([data-visible]) { display: none; }
+a {	color: dodgerblue; }
+.large { margin-top: -12.5vh; }
+
+.color-palette { color: orchid deeppink crimson coral gold khaki grey lightgreen springgreen lightskyblue dodgerblue darkslateblue; }
+
+</style>
+
+<pre>
+Usage:
+
+- Next slide: <span style="color: deeppink">▶</span>
+- Previous slide: <span style="color: deeppink">◀</span>
+
+
+
+
+
+
+
+
+
+
+<span style="color: grey"><i>// This presentation is best viewed in 1080p</i></span>
+</pre>
+
+<pre>
+<span style="color: dodgerblue"># JavaScript Type Annotations</span>
+
+<span style="color: grey">// Ein Vorschlag für <q>Types as Comments</q> in JavaScript</span>
+
+> Agenda:
+
+  <span style="color: khaki;"><i>1.</i></span> Einleitung
+  <span style="color: khaki;"><i>2.</i></span> Beweggründe
+  <span style="color: khaki;"><i>3.</i></span> Status
+  <span style="color: khaki;"><i>4.</i></span> Syntax 
+  <span style="color: khaki;"><i>5.</i></span> Auslassungen
+  <span style="color: khaki;"><i>6.</i></span> FAQ
+
+> Slides: <a href="https://marksweb.site/javascript-type-annotations">marksweb.site/javascript-type-annotations</a>
+> Vorschlag: <a href="https://github.com/tc39/proposal-type-annotations">github.com/tc39/proposal-type-annotations</a>
+</pre>
+
+<pre>
+<span style="color: dodgerblue"># Einleitung</span>
+
+<span style="color: lightgreen">> Was sind JavaScript Type Annotations?</span>
+
+- Typ-Hinweise, die zur Laufzeit ignoriert werden
+- Syntax ist ähnlich zu TypeScript oder Flow
+
+-> Keine Syntax-Fehler, wenn TypeScript im Browser ausgeführt wird
+-> <i>Aber</i> auch keine Syntax-Prüfung durch Browser
+</pre>
+
+<pre>
+<span style="color: dodgerblue"># Einleitung</span>
+
+<span style="color: lightgreen">> Woher kommt der Vorschlag?</span>
+
+- Aus der Community, von Gil Tayar und vielen anderen
+- Wird auf GitHub als ECMAScript Proposal entwickelt
+<span style="color: grey">/* ECMAScript = Standardisierte JavaScript Sprachkern */</span>
+- In Diskussion durch Technical Committee 39 (<a href="https://tc39.es/">TC39</a>)
+- Unter Beteiligung durch TypeScript-Team
+</pre>
+
+<pre>
+<span style="color: dodgerblue"># Beweggründe</span>
+
+<span style="color: lightgreen">> Nutzung und Nachfrage durch Community</span>
+
+- TypeScript ist die am 4. häufigsten genutzte Sprache
+  laut GitHubs <q><a href="https://octoverse.github.com/">State of the Octoverse</a></q>
+- Statische Typisierung ist das am meisten gewünschte
+  Sprachfeature in der <q><a href="https://stateofjs.com">State of JavaScript</a></q>-Umfrage
+- TypeScript ist die am 4. meisten geliebte Sprache
+  laut Stack Overflows <q><a href="https://insights.stackoverflow.com/survey/">Annual Developer Survey</a></q>
+</pre>
+
+<pre>
+<span style="color: dodgerblue"># Beweggründe</span>
+
+<span style="color: lightgreen">> Kompilierungs-Trends</span>
+
+</pre>
+
+<pre>
+<span style="color: dodgerblue"># Beweggründe</span>
+
+<span style="color: lightgreen">> Einschränkungen bei JSDoc-Kommentaren</span>
+
+</pre>
+
+<pre>
+<span style="color: deeppink">exit;</span>
+</pre>
+
+<script>
+
+let slides = document.querySelectorAll("pre");
+let l = slides.length - 1;
+let s = location.hash === "" ? 0 : parseInt(location.hash.slice(1));
+slides[s].dataset.visible = "";
+
+function slide(n) {
+	delete slides[s].dataset.visible;
+	s = n;
+	if (n === 0) history.replaceState(null, "", location.href.replace(/#\d+/, ""));
+	else location.hash = `#${n}`;
+	slides[n].dataset.visible = "";
+}
+
+addEventListener("hashchange", () =>
+	slide(parseInt(location.hash.slice(1))));
+
+addEventListener("keyup", ({ key }) => { switch (key) {
+	case "ArrowLeft": slide(s === 0 ? l : s - 1); break;
+	case "ArrowRight": slide(s === l ? 0 : s + 1); break;
+}});
+
+</script>
