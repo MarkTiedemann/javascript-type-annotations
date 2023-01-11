@@ -41,9 +41,8 @@ Usage:
   <span style="color: khaki;"><i>1.</i></span> Einleitung
   <span style="color: khaki;"><i>2.</i></span> Beweggründe
   <span style="color: khaki;"><i>3.</i></span> Status
-  <span style="color: khaki;"><i>4.</i></span> Syntax 
-  <span style="color: khaki;"><i>5.</i></span> Auslassungen
-  <span style="color: khaki;"><i>6.</i></span> FAQ
+  <span style="color: khaki;"><i>4.</i></span> Unterschiede zu TypeScript
+  <span style="color: khaki;"><i>5.</i></span> FAQ
 
 > Slides: <a href="https://marksweb.site/javascript-type-annotations">marksweb.site/javascript-type-annotations</a>
 > Vorschlag: <a href="https://github.com/tc39/proposal-type-annotations">github.com/tc39/proposal-type-annotations</a>
@@ -91,12 +90,49 @@ Usage:
 
 <span style="color: lightgreen">> Kompilierungs-Trends</span>
 
+- Trend der <q>Downlevel</q>-Komplilierung von moderner
+  JavaScript-Sytax für ältere Ziel-Browser (z. B. IE)
+  durch Build-Tools wie Babel ist rückläufig
+- Häufig wird nur noch <q>Type Erasure</q> benötigt
+- TypeScript-Runtimes wie Deno oder Bun zeigen, dass
+  dieser Build-Schritt auch eingespart werden kann
 </pre>
 
 <pre>
-<span style="color: dodgerblue"># Beweggründe</span>
+<span style="color: dodgerblue"># Status</span>
 
-<span style="color: lightgreen">> Einschränkungen bei JSDoc-Kommentaren</span>
+<span style="color: lightgreen">> Timeline</span>
+
+- Vorschlag wurde im Dezember 2020 öffentlich gemacht
+- Befindet sich seit März 2022 in <q>Stage 1</q> des <a href="https://tc39.es/process-document/">TC39-</a>
+  <a href="https://tc39.es/process-document/">Standardisierungsprozesses</a>
+  - Das Komitee ist an dem Vorschlag interessiert
+  - Der Vorschlag ist dokumentiert, enthält Beispiele,
+    Beweggründe, mögliche Hindernisse, etc.
+</pre>
+
+<pre>
+<span style="color: dodgerblue"># Status</span>
+
+<span style="color: lightgreen">> Nächste Schritte</span>
+
+- <i>Stage 2</i>: Formelle Spezifikation
+- <i>Stage 3</i>:
+  - Browser- und Nutzer-Feedback
+  - Spezifikation ist fertiggestellt
+- <i>Stage 4</i>:
+  - <a href="https://github.com/tc39/test262">Test262</a> Conformance Tests
+  - Umsetzung und Nutzung in mindestens
+    2 bedeutenden JavaScript-Engines
+</pre>
+
+<pre>
+<span style="color: dodgerblue"># Unterschiede zu TypeScript</span>
+
+</pre>
+
+<pre>
+<span style="color: dodgerblue"># FAQ</span>
 
 </pre>
 
