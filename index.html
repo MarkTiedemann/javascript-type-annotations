@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html lang="de">
 <meta charset="utf-8"/>
 <title>JavaScript Type Annotations</title>
 <style>
@@ -9,17 +10,15 @@ pre:not([data-visible]) { display: none; }
 a {	color: dodgerblue; }
 .large { margin-top: -12.5vh; }
 
-.color-palette { color: orchid deeppink crimson coral gold khaki grey lightgreen springgreen lightskyblue dodgerblue darkslateblue; }
+.color-palette { color: orchid deeppink crimson coral gold khaki grey lightgreen forestgreen lightskyblue dodgerblue darkslateblue; }
 
 </style>
 
 <pre>
-Usage:
+Benutzerhinweise:
 
-- Next slide: <span style="color: deeppink">▶</span>
-- Previous slide: <span style="color: deeppink">◀</span>
-
-
+- Nächste Folie: <span style="color: deeppink">▶</span>
+- Vorherige Folie: <span style="color: deeppink">◀</span>
 
 
 
@@ -28,7 +27,9 @@ Usage:
 
 
 
-<span style="color: grey"><i>// This presentation is best viewed in 1080p</i></span>
+
+
+<span style="color: grey"><i>// Diese Präsentation ist auf 1080p ausgelegt</i></span>
 </pre>
 
 <pre>
@@ -36,7 +37,7 @@ Usage:
 
 <span style="color: grey">// Ein Vorschlag für <q>Types as Comments</q> in JavaScript</span>
 
-> Agenda:
+<span style="color: lightgreen">> Agenda</span>
 
   <span style="color: khaki;"><i>1.</i></span> Einleitung
   <span style="color: khaki;"><i>2.</i></span> Beweggründe
@@ -44,8 +45,9 @@ Usage:
   <span style="color: khaki;"><i>4.</i></span> Unterschiede zu TypeScript
   <span style="color: khaki;"><i>5.</i></span> FAQ
 
-> Slides: <a href="https://marksweb.site/javascript-type-annotations">marksweb.site/javascript-type-annotations</a>
-> Vorschlag: <a href="https://github.com/tc39/proposal-type-annotations">github.com/tc39/proposal-type-annotations</a>
+
+<i>* Slides: <a href="https://marksweb.site/javascript-type-annotations">marksweb.site/javascript-type-annotations</a></i>
+<i>* Vorschlag: <a href="https://github.com/tc39/proposal-type-annotations">github.com/tc39/proposal-type-annotations</a></i>
 </pre>
 
 <pre>
@@ -53,11 +55,16 @@ Usage:
 
 <span style="color: lightgreen">> Was sind JavaScript Type Annotations?</span>
 
-- Typ-Hinweise, die zur Laufzeit ignoriert werden
-- Syntax ist ähnlich zu TypeScript oder Flow
 
--> Keine Syntax-Fehler, wenn TypeScript im Browser ausgeführt wird
--> <i>Aber</i> auch keine Syntax-Prüfung durch Browser
+- Typ-Hinweise, die zur Laufzeit ignoriert werden
+
+- Syntax ist ähnlich zu TypeScript und Flow
+
+  -> Keine JavaScript-Syntax-Fehler, wenn TypeScript
+     im Browser ausgeführt wird
+
+  -> <i>Aber</i> auch <u>keine</u> TypeScript-Syntax-Prüfung
+     durch den Browser
 </pre>
 
 <pre>
@@ -65,11 +72,15 @@ Usage:
 
 <span style="color: lightgreen">> Woher kommt der Vorschlag?</span>
 
+
 - Aus der Community, von Gil Tayar und vielen anderen
-- Wird auf GitHub als ECMAScript Proposal entwickelt
-<span style="color: grey">/* ECMAScript = Standardisierte JavaScript Sprachkern */</span>
-- In Diskussion durch Technical Committee 39 (<a href="https://tc39.es/">TC39</a>)
-- Unter Beteiligung durch TypeScript-Team
+
+- Wird auf GitHub als <q>ECMAScript Proposal</q> entwickelt
+  <span style="color: grey">// ECMAScript = Standardisierte JavaScript Sprachkern</span>
+
+- In Diskussion durch <q>Technical Committee 39</q> (<a href="https://tc39.es/">TC39</a>)
+
+- Unter Beteiligung durch das TypeScript-Team
 </pre>
 
 <pre>
@@ -77,10 +88,13 @@ Usage:
 
 <span style="color: lightgreen">> Nutzung und Nachfrage durch Community</span>
 
+
 - TypeScript ist die am 4. häufigsten genutzte Sprache
   laut GitHubs <q><a href="https://octoverse.github.com/">State of the Octoverse</a></q>
+
 - Statische Typisierung ist das am meisten gewünschte
   Sprachfeature in der <q><a href="https://stateofjs.com">State of JavaScript</a></q>-Umfrage
+
 - TypeScript ist die am 4. meisten geliebte Sprache
   laut Stack Overflows <q><a href="https://insights.stackoverflow.com/survey/">Annual Developer Survey</a></q>
 </pre>
@@ -90,10 +104,13 @@ Usage:
 
 <span style="color: lightgreen">> Kompilierungs-Trends</span>
 
+
 - Trend der <q>Downlevel</q>-Komplilierung von moderner
   JavaScript-Sytax für ältere Ziel-Browser (z. B. IE)
   durch Build-Tools wie Babel ist rückläufig
+
 - Häufig wird nur noch <q>Type Erasure</q> benötigt
+
 - TypeScript-Runtimes wie Deno oder Bun zeigen, dass
   dieser Build-Schritt auch eingespart werden kann
 </pre>
@@ -103,10 +120,14 @@ Usage:
 
 <span style="color: lightgreen">> Timeline</span>
 
+
 - Vorschlag wurde im Dezember 2020 öffentlich gemacht
+
 - Befindet sich seit März 2022 in <q>Stage 1</q> des <a href="https://tc39.es/process-document/">TC39-</a>
   <a href="https://tc39.es/process-document/">Standardisierungsprozesses</a>
+
   - Das Komitee ist an dem Vorschlag interessiert
+
   - Der Vorschlag ist dokumentiert, enthält Beispiele,
     Beweggründe, mögliche Hindernisse, etc.
 </pre>
@@ -116,10 +137,13 @@ Usage:
 
 <span style="color: lightgreen">> Nächste Schritte</span>
 
+
 - <i>Stage 2</i>: Formelle Spezifikation
+
 - <i>Stage 3</i>:
   - Browser- und Nutzer-Feedback
   - Spezifikation ist fertiggestellt
+
 - <i>Stage 4</i>:
   - <a href="https://github.com/tc39/test262">Test262</a> Conformance Tests
   - Umsetzung und Nutzung in mindestens
@@ -128,6 +152,111 @@ Usage:
 
 <pre>
 <span style="color: dodgerblue"># Unterschiede zu TypeScript</span>
+
+<span style="color: lightgreen">> Keine Features, die Code generieren</span>
+
+
+- Keine Enums
+
+  <span style="color: orchid">enum</span> <span style="color: orange">Direction</span> {
+    <span style="color: lightskyblue">Left</span>,
+    <span style="color: lightskyblue">Right</span>,
+  };
+
+  <span style="color: orange">Direction</span>.<span style="color: lightskyblue">Left</span>; <span style="color: grey">// -> 0</span>
+</pre>
+
+<pre>
+<span style="color: dodgerblue"># Unterschiede zu TypeScript</span>
+
+<span style="color: lightgreen">> Keine Features, die Code generieren</span>
+
+
+- Keine Namensräume
+
+  <span style="color: orchid">namespace</span> <span style="color: orange">Config</span> {
+    <span style="color: orchid">export</span> <span style="color: dodgerblue">const</span> <span style="color: lightskyblue">Version</span> = <span style="color: gold">1</span>;
+  }
+
+  <span style="color: orange">Config</span>.<span style="color: lightskyblue">Version</span>; <span style="color: grey">// -> 1</span>
+</pre>
+
+<pre>
+<span style="color: dodgerblue"># Unterschiede zu TypeScript</span>
+
+<span style="color: lightgreen">> Keine Features, die Code generieren</span>
+
+
+- Keine <q>Parameter Properties</q>
+
+  <span style="color: orchid">class</span> <span style="color: orange">Cat</span> {
+    <span style="color: orchid">constructor</span>(<span style="color: orchid">readonly</span> <span style="color: lightgreen">name</span>: <span style="color: lightskyblue">string</span>) {}
+  }
+
+  <span style="color: dodgerblue">let</span> <span style="color: lightskyblue">cat</span> = <span style="color: orchid">new</span> <span style="color: orange">Cat</span>(<span style="color: gold">"Lio"</span>);
+  <span style="color: lightskyblue">cat</span>.<span style="color: lightgreen">name</span>; <span style="color: grey">// -> "Lio"</span>
+</pre>
+
+<pre>
+<span style="color: dodgerblue"># Unterschiede zu TypeScript</span>
+
+<span style="color: lightgreen">> Kein JSX</span>
+
+
+- Bei dem Vorschlag geht es um das Ausblenden von Typ-
+  Hinweisen (<q>Type Erasure</q>), nicht um die Unwandlung
+  von einer Syntax in eine andere
+  <span style="color: grey">// JSX ist eine Unwandlung von XML-ähnlicher Syntax in</span>
+  <span style="color: grey">// JavaScript-Statements</span>
+
+- Falls JSX standardisiert werden sollten, dann höchstens
+  in Rahmen eines neuen Vorschlages
+</pre>
+
+<pre>
+<span style="color: dodgerblue"># Unterschiede zu TypeScript</span>
+
+<span style="color: lightgreen">> Features, die noch zur Debatte stehen</span>
+
+
+- <q>Ambient Declarations</q>
+
+  <span style="color: orchid">declare</span> <span style="color: dodgerblue">var</span> <span style="color: khaki">innerHeight</span>: <span style="color: lightskyblue">number</span>;
+
+  <span style="color: orchid">declare</span> <span style="color: dodgerblue">function</span> <span style="color: lightgreen">print</span>(): <span style="color: lightskyblue">void</span>;
+</pre>
+
+<pre>
+<span style="color: dodgerblue"># Unterschiede zu TypeScript</span>
+
+<span style="color: lightgreen">> Features, die noch zur Debatte stehen</span>
+
+
+- Funktionsüberladung
+
+  <span style="color: dodgerblue">function</span> <span style="color: lightgreen">foo</span>(x: <span style="color: lightskyblue">number</span>): <span style="color: lightskyblue">number</span>;
+  <span style="color: dodgerblue">function</span> <span style="color: lightgreen">foo</span>(x: <span style="color: lightskyblue">string</span>): <span style="color: lightskyblue">string</span>;
+  <span style="color: dodgerblue">function</span> <span style="color: lightgreen">foo</span>(x: <span style="color: lightskyblue">string | number</span>): <span style="color: lightskyblue">string | number</span> {
+    <span style="color: orchid">if</span> (<span style="color: orchid">typeof</span> x === <span style="color: gold">"number"</span>) {
+      <span style="color: orchid">return</span> x + <span style="color: gold">1</span>;
+    } <span style="color: orchid">else</span> {
+      <span style="color: orchid">return</span> x + <span style="color: gold">"!"</span>;
+    }
+  }
+</pre>
+
+<pre>
+<span style="color: dodgerblue"># Unterschiede zu TypeScript</span>
+
+<span style="color: lightgreen">> Features, die noch zur Debatte stehen</span>
+
+
+- Klassen- und Feld-Modifikatoren
+
+  - Klassen, die als `<span style="color: orchid">abstract</span>` deklariert sind
+  - `<span style="color: orchid">private</span>`, `<span style="color: orchid">protected</span>` und `<span style="color: orchid">public</span>` für Felder und Methoden
+  - `<span style="color: orchid">readonly</span>`-Felder
+  - Überschriebene Methoden mit `<span style="color: orchid">override</span>`
 
 </pre>
 
