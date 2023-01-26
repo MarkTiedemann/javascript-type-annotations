@@ -10,7 +10,7 @@ pre:not([data-visible]) { display: none; }
 a {	color: dodgerblue; }
 .large { margin-top: -12.5vh; }
 
-.color-palette { color: orchid deeppink crimson coral gold khaki grey lightgreen forestgreen lightskyblue dodgerblue darkslateblue; }
+.color-palette { color: orchid deeppink crimson coral gold khaki grey lightgreen lightskyblue dodgerblue darkslateblue; }
 
 </style>
 
@@ -35,7 +35,8 @@ Benutzerhinweise:
 <pre>
 <span style="color: dodgerblue"># JavaScript Type Annotations</span>
 
-<span style="color: grey">// Ein Vorschlag für <q>Types as Comments</q> in JavaScript</span>
+Ein <q>ECMAScript Proposal</q> für <q>Types as Comments</q> in JavaScript
+
 
 <span style="color: lightgreen">> Agenda</span>
 
@@ -43,7 +44,7 @@ Benutzerhinweise:
   <span style="color: khaki;"><i>2.</i></span> Beweggründe
   <span style="color: khaki;"><i>3.</i></span> Status
   <span style="color: khaki;"><i>4.</i></span> Unterschiede zu TypeScript
-  <span style="color: khaki;"><i>5.</i></span> FAQ
+  <span style="color: khaki;"><i>5.</i></span> Diskussion
 
 
 <i>* Slides: <a href="https://marksweb.site/javascript-type-annotations">marksweb.site/javascript-type-annotations</a></i>
@@ -261,8 +262,40 @@ Benutzerhinweise:
 </pre>
 
 <pre>
-<span style="color: dodgerblue"># FAQ</span>
+<span style="color: dodgerblue"># Diskussion</span>
 
+
+- <span style="color: lightgreen">Warum kein Type-Checking im Browser?</span>
+
+  <i>Die Fehler würden Nutzer beeinträchtigen, nicht die Entwickler
+  (<q>Don't break the web</q>).</i>
+
+
+- <span style="color: lightgreen">Warum wird TypeScript nicht vom TC39 standardisiert?</span>
+
+  <i>TypeScript soll weiterhin kompetitiv bleiben. Nur der
+  <q>kleinste gemeinsame Nenner</q> soll standardisiert werden.</i>
+</pre>
+
+<pre>
+<span style="color: dodgerblue"># Diskussion</span>
+
+
+- <span style="color: lightgreen">Kompilieren nicht alle Entwickler sowieso?</span>
+
+  <i>Die Notwendigkeit dafür sinkt bzw. könnte verschwinden:
+  - <q>Downlevel</q>-Komplilierung nimmt ab, weil immer weniger Legacy-
+    Browser unterstützt werden.
+  - Bundling nimmt ab, weil moderne Browser Modules unterstützen.
+  - Nur noch <q>Type Erasure</q> fehlt, um Kompilierung für Frontend-
+    JavaScript-Entwicklung unnötig zu machen.</i>
+</pre>
+
+<pre>
+<span style="color: dodgerblue"># Diskussion</span>
+
+
+<span style="color: khaki">Noch weitere Fragen? Feedback? Hinweise?</i>
 </pre>
 
 <pre>
